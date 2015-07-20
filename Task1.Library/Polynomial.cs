@@ -99,7 +99,7 @@ namespace Task1.Library
             Array.Copy(_coefficients, copy, _coefficients.Length);
             foreach (var tuple in pairs)
             {
-                if (tuple.Item1 >= 0)
+                if (tuple.Item1 >= 0 && !Double.IsNaN(tuple.Item2))
                 {
                     copy[tuple.Item1] = tuple.Item2;
                 }
